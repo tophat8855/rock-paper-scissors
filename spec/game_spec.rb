@@ -39,4 +39,10 @@ describe Game do
     expect(output).to_not include("You chose: monkey")
   end
 
+  it "tells player what the computer chose" do
+    simulate_user_input('rock')
+    app.run
+    expect(output).to include("Computer chose: ")
+  end
+
 end
